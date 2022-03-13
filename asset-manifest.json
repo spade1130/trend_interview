@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/trend_interview/static/css/main.f46b259a.css",
+    "main.js": "/trend_interview/static/js/main.af20ab1a.js",
+    "static/media/view hide.svg": "/trend_interview/static/media/view hide.aee315fdd2149b2be81c88911b3b1e48.svg",
+    "index.html": "/trend_interview/index.html",
+    "static/media/Arrow 1.svg": "/trend_interview/static/media/Arrow 1.b94f21b2e828d4dbe8924b834f633ab6.svg",
+    "static/media/Fb.svg": "/trend_interview/static/media/Fb.400f853da7da9965b39c910eff9c8c76.svg",
+    "static/media/Vector.svg": "/trend_interview/static/media/Vector.51eead8d8384437ab2946be92816244a.svg",
+    "static/media/Vector1.svg": "/trend_interview/static/media/Vector1.723f126a13e4c4ff6d1f984e1bf36ea5.svg",
+    "static/media/Fb1.svg": "/trend_interview/static/media/Fb1.4f4c51a51b49e04cfcb075df6115cfbd.svg",
+    "static/media/Group 2.svg": "/trend_interview/static/media/Group 2.b1f38c3adfdb64ee2bf5b5986263c256.svg",
+    "main.f46b259a.css.map": "/trend_interview/static/css/main.f46b259a.css.map",
+    "main.af20ab1a.js.map": "/trend_interview/static/js/main.af20ab1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f46b259a.css",
+    "static/js/main.af20ab1a.js"
+  ]
+}
