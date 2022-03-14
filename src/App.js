@@ -6,6 +6,7 @@ import { ReactComponent as Google1Icon } from "./img/Vector1.svg";
 import { ReactComponent as FbIcon } from "./img/Fb.svg";
 import { ReactComponent as Fb1Icon } from "./img/Fb1.svg";
 import { ReactComponent as EyeIcon } from "./img/view hide.svg";
+import { ReactComponent as Eye1Icon } from "./img/view show.svg";
 import { ReactComponent as CheckIcon } from "./img/Group 2.svg";
 
 const Container = styled.div`
@@ -318,6 +319,17 @@ const Pwd = styled.div`
   background: #f1f5ff;
   margin-bottom: 34px;
   position: relative;
+  svg:nth-of-type(1) {
+    display: none;
+  }
+  &:hover {
+    svg {
+      display: none;
+    }
+    svg:nth-of-type(1) {
+      display: block;
+    }
+  }
 `;
 
 const PwdInput = styled.div`
@@ -443,11 +455,19 @@ function App() {
   const verifyRef = useRef();
 
   const handlePwdChange = () => {
-    if (pwdRef.current.value.length >= 8) {
+    if (pwdRef.current.value.length < 8) {
       verifyRef.current.style.display = "flex";
     } else {
       verifyRef.current.style.display = "none";
     }
+  };
+
+  const handleGoogleAccount = () => {
+    window.open("https://accounts.google.com/", "GoogleAccount");
+  };
+
+  const handleFbAccount = () => {
+    window.open("https://zh-tw.facebook.com/", "FacebookAccount");
   };
 
   return (
@@ -466,12 +486,12 @@ function App() {
           </p>
         </Header>
         <SignUpBtn>
-          <Google>
+          <Google onClick={handleGoogleAccount}>
             <Google1Icon />
             <GoogleIcon />
             Sign up with Google
           </Google>
-          <Facebook>
+          <Facebook onClick={handleFbAccount}>
             <Fb1Icon />
             <FbIcon />
             Sign up with Facebook
@@ -502,13 +522,25 @@ function App() {
               <input
                 type="password"
                 required="required"
-                pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{8,}$"
+                pattern="^(?=.*[0-9]).{8,}$"
                 onChange={handlePwdChange}
                 ref={pwdRef}
               />
               <label>Password</label>
             </PwdInput>
+            <Eye1Icon
+              id="show"
+              style={{ zIndex: "5", position: "absolute", right: "18px" }}
+              onClick={() => {
+                if (pwdRef.current.type === "password") {
+                  pwdRef.current.type = "text";
+                } else {
+                  pwdRef.current.type = "password";
+                }
+              }}
+            />
             <EyeIcon
+              id="hide"
               style={{ zIndex: "5", position: "absolute", right: "18px" }}
             />
           </Pwd>
